@@ -9,7 +9,11 @@
 
     <div id="app">
         <h1>Hello: {{ message }}</h1>
-        <input type="text" v-on:input="onMyInput">
+        <input type="text" v-on:input="onMyInput"><br>
+        <h2>Summ (10 + 60): {{ 10 + 60 }}</h2>
+        <h3>Method: {{ sayHello() }}</h3>
+        <h4>Flag: {{ isOk ? 'It Is Okay' : 'It is not Okay' }}</h4>
+        <h5>Functions: {{ str.split('').reverse().join('') }}</h5>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
