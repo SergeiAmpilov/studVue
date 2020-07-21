@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,6 +15,21 @@
         <h3>Method: {{ sayHello() }}</h3>
         <h4>Flag: {{ isOk ? 'It Is Okay' : 'It is not Okay' }}</h4>
         <h5>Functions: {{ str.split('').reverse().join('') }}</h5>
+        <p>
+            <a v-bind:href="url">Ссылка на яндекс {{ url }}</a>
+        </p>
+        <p v-html="link">           
+        </p>
+
+        <h1>Счетчик: {{ counter }}</h1>
+        <button v-on:click="upCounter">Увеличить</button>
+
+        <hr>
+
+        <h1 v-on:mouseover="onHover">Счетчик2= {{ counter2 }}</h1>
+        <button v-on:click="counter2++">Увеличить</button>
+
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

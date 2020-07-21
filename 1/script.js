@@ -4,14 +4,29 @@ var appV = new Vue({
         message: 'Привет, Vue!',
         isOk: true,
         str: 'My name is Viachestas',
+        url: 'https://yandex.ru/',
+        link: '<a href="http://google.com">Google</a>',
+        counter: 0,
+        counter2: 0,
     },
     methods: {
         onMyInput: function (event) {
             this.message = event.target.value;
         },
         sayHello: function (e) {
-            console.log(e);
+            // console.log(e);
             return "Hello Sergei";
+        },
+        upCounter: function () {
+            this.counter++ ;
+        },
+        onHover: function(el) {
+            var cL = el.target.classList;
+            if (cL.contains("red-b")) {
+                cL.remove("red-b");
+            } else {
+                cL.add("red-b");
+            }
         }
 
     }
