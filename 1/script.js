@@ -17,8 +17,14 @@ var appV = new Vue({
             // console.log(e);
             return "Hello Sergei";
         },
-        upCounter: function () {
-            this.counter++ ;
+        upCounter: function (num, event) {
+            this.counter += num ;
+
+            if (this.counter % 2 === 0) {
+                event.target.style.color = 'green';                
+            } else {
+                event.target.style.color = 'black';
+            }
         },
         onHover: function(el) {
             var cL = el.target.classList;

@@ -22,7 +22,8 @@
         </p>
 
         <h1>Счетчик: {{ counter }}</h1>
-        <button v-on:click="upCounter">Увеличить</button>
+        <button v-on:click="upCounter(1, $event)">Увеличить на 1</button>
+        <button v-on:click="upCounter(5, $event)">Увеличить на 5</button>
 
         <hr>
 
