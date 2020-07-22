@@ -16,13 +16,14 @@
         <h4>Flag: {{ isOk ? 'It Is Okay' : 'It is not Okay' }}</h4>
         <h5>Functions: {{ str.split('').reverse().join('') }}</h5>
         <p>
-            <a v-bind:href="url">Ссылка на яндекс {{ url }}</a>
+            <a v-bind:href="url">Ссылка на яндекс {{ url }}</a> <br>
+            <a :href="urlgoogle">Ссылка на Гугл без бинд {{ urlgoogle }}</a>
         </p>
         <p v-html="link">           
         </p>
 
         <h1>Счетчик: {{ counter }}</h1>
-        <button v-on:click="upCounter(1, $event)">Увеличить на 1</button>
+        <button @click="upCounter(1, $event)">Увеличить на 1</button>
         <button v-on:click="upCounter(5, $event)">Увеличить на 5</button>
 
         <hr>

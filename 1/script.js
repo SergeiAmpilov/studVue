@@ -8,6 +8,7 @@ var appV = new Vue({
         link: '<a href="http://google.com">Google</a>',
         counter: 0,
         counter2: 0,
+        urlgoogle: "https://google.com"
     },
     methods: {
         onMyInput: function (event) {
