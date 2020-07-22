@@ -33,7 +33,13 @@ var appV = new Vue({
             } else {
                 cL.add("red-b");
             }
-        }
+        },
+        alertValue: function (event) {
+            if ( event.keyCode === 13 ) {
+                console.log(event.target.value);                
+            }
+            
+        },
 
     }
 });
