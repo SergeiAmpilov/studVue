@@ -45,6 +45,16 @@
         <p>
             {{ text9 }}
         </p>
+        <br>
+        <div 
+            class="circle" 
+            @click=" isActive = !isActive"
+            :class="getCssClasses"
+        >
+        </div>
+
+        <div class="circle" :class="[color, { 'red': isActive } ]"></div>
+        <input type="text" v-model.lazy="color">
 
 
     </div>

@@ -9,7 +9,17 @@ var appV = new Vue({
         counter: 0,
         counter2: 0,
         urlgoogle: "https://google.com",
-        text9: 'Initial txt'
+        text9: 'Initial txt',
+        isActive: false,
+        color: 'green'
+    },
+    computed: {
+        getCssClasses: function() {
+            return {
+                'red': this.isActive, 
+                'green': !this.isActive
+            };
+        },
     },
     methods: {
         onMyInput: function (event) {
@@ -44,7 +54,8 @@ var appV = new Vue({
         },
         inputText9: function (event) {
             this.text9 = event.target.value;
-        }
+        },
+       
 
     }
 });
