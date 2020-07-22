@@ -8,7 +8,8 @@ var appV = new Vue({
         link: '<a href="http://google.com">Google</a>',
         counter: 0,
         counter2: 0,
-        urlgoogle: "https://google.com"
+        urlgoogle: "https://google.com",
+        text9: 'Initial txt'
     },
     methods: {
         onMyInput: function (event) {
@@ -41,6 +42,9 @@ var appV = new Vue({
             }
             
         },
+        inputText9: function (event) {
+            this.text9 = event.target.value;
+        }
 
     }
 });

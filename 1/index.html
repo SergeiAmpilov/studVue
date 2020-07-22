@@ -37,6 +37,15 @@
         <!-- <input type="text" v-on:keyup="alertValue"> <br> -->
         <input type="text" v-on:keyup.enter.tab.space="alertValue">
 
+        <hr>
+
+        <!-- <input type="text" @input="inputText9"> -->
+        <!-- <input type="text" @input="text9 = $event.target.value" :value="text9"> -->
+        <input type="text" v-model.lazy="text9">
+        <p>
+            {{ text9 }}
+        </p>
+
 
     </div>
 
