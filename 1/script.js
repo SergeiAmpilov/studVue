@@ -11,13 +11,20 @@ var appV = new Vue({
         urlgoogle: "https://google.com",
         text9: 'Initial txt',
         isActive: false,
-        color: 'green'
+        color: 'green',
+        height: 100,
     },
     computed: {
         getCssClasses: function() {
             return {
                 'red': this.isActive, 
                 'green': !this.isActive
+            };
+        },
+        circleClasses: function () {
+            return { 
+                'background': this.color,
+                'height': this.height + 'px' 
             };
         },
     },

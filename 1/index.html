@@ -55,6 +55,20 @@
 
         <div class="circle" :class="[color, { 'red': isActive } ]"></div>
         <input type="text" v-model.lazy="color">
+        
+        <hr>
+
+        <div class="circle" :style="circleClasses"></div>
+        <div class="circle" :style="[circleClasses, {'width':height + 'px'} ]"></div>
+        <div class="circle"></div>
+
+        <input type="text" v-model="color">
+        <input type="text" v-model="height">
+
+
+        
+
+
 
 
     </div>
