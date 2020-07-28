@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter color</title>
+    <link rel="stylesheet" href="styleFilt.css">
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li><button @click="activeColors = ['red', 'white', 'rose']">All</button></li>
+            <li><button @click="activeColors = ['red']">Red</button></li>
+            <li><button @click="activeColors = ['white']">White</button></li>
+            <li><button @click="activeColors = ['rose']">Rose</button></li>
+        </ul>
+
+
+
+        <div class="item f-rose" :class="getActiveColorClass('rose')"></div>
+        <div class="item f-rose" :class="getActiveColorClass('rose')"></div>
+        <div class="item f-red"  :class="getActiveColorClass('red')"></div>
+        <div class="item f-white" :class="getActiveColorClass('white')"></div>
+
+        <div class="item f-red" :class="getActiveColorClass('red')"></div>
+
+        <div class="item f-white" :class="getActiveColorClass('white')"></div>
+<!--        <div class="item f-white" :class="getActiveColorClass('white')></div>-->
+<!--        <div class="item f-red" :class="getActiveColorClass('red')></div>-->
+<!--        <div class="item f-red" :class="getActiveColorClass('red')></div>-->
+<!--        <div class="item f-white" :class="getActiveColorClass('white')></div>-->
+
+<!--        <div class="item f-rose" :class="getActiveColorClass('rose')></div>-->
+<!--        <div class="item f-rose" :class="getActiveColorClass('rose')></div>-->
+<!--        <div class="item f-rose" :class="getActiveColorClass('rose')></div>-->
+<!--        <div class="item f-red" :class="getActiveColorClass('red')></div>-->
+<!--        <div class="item f-rose" :class="getActiveColorClass('rose')></div>-->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scriptflt.js"></script>
+</body>
+</html>
